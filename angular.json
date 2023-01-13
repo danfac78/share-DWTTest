@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "poc-scan-package": {
+      "projectType": "library",
+      "root": "projects/poc-scan-package",
+      "sourceRoot": "projects/poc-scan-package/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/poc-scan-package/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/poc-scan-package/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/poc-scan-package/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/poc-scan-package/src/test.ts",
+            "tsConfig": "projects/poc-scan-package/tsconfig.spec.json",
+            "karmaConfig": "projects/poc-scan-package/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "poc-scan-package"
 }
