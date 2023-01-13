@@ -3,5 +3,6 @@
   "dest": "../../dist/poc-scan-package",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["dwt"]
 }

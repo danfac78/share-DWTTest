@@ -6,6 +6,10 @@
     "@angular/core": "^13.3.0"
   },
   "dependencies": {
+    "dwt": "^18.1.0",
     "tslib": "^2.3.0"
-  }
+  },
+  "bundledDependencies": [
+    "dwt"
+  ]
 }
