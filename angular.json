@@ -81,7 +81,12 @@
             "tsConfig": "projects/poc-scan-showcase/tsconfig.app.json",
             "assets": [
               "projects/poc-scan-showcase/src/favicon.ico",
-              "projects/poc-scan-showcase/src/assets"
+              "projects/poc-scan-showcase/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/poc-scan-showcase/node_modules/poc-scan-package/assets/dwt-resources/dist/",
+                "output": "assets"
+              }
             ],
             "styles": ["projects/poc-scan-showcase/src/styles.css"],
             "scripts": []
